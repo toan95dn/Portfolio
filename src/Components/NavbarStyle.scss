@@ -31,6 +31,7 @@ header {
       ul {
         display: flex;
         li {
+          cursor: pointer;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -46,10 +47,24 @@ header {
         width: 100%;
         justify-content: flex-end;
         li {
+          position: relative;
           margin: 0 3rem 0 4rem;
           height: 4rem;
           width: 14rem;
-          border-bottom: 0.25rem solid black;
+          border-bottom: 0.4rem solid black;
+          &::before {
+            position: absolute;
+            bottom: -0.4rem;
+            left: 0;
+            content: "";
+            width: 0%;
+            height: 0.4rem;
+            background: red;
+            transition: 0.25s;
+          }
+          &:hover::before {
+            width: 100%;
+          }
         }
       }
     }
@@ -111,7 +126,7 @@ header {
       }
 
       .socialMedia {
-        margin: 2rem 2rem 15vh 2rem;
+        margin: 2rem 2rem 20vh 2rem;
         ul {
           width: 100%;
           justify-content: space-evenly;
