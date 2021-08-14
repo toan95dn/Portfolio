@@ -92,7 +92,7 @@ header {
     }
 
     .linksContainer {
-      visibility: visible;
+      visibility: hidden;
       background-color: gray;
       position: fixed;
       display: grid;
@@ -101,9 +101,15 @@ header {
       top: 5rem;
       left: 0;
       width: 30rem;
+      transform: translateX(-30rem);
       height: 100vh;
       font-size: 2.5rem;
-      z-index: -1;
+      transition: 0.25s;
+
+      &.active {
+        visibility: visible;
+        transform: translateX(0);
+      }
 
       nav {
         ul {

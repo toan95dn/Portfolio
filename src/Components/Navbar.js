@@ -1,6 +1,8 @@
 import React from "react";
+import { useState } from "react";
 
 import NavbarStyle from "./NavbarStyle.scss";
+
 import {
   AiOutlineInfoCircle,
   AiOutlineCode,
@@ -12,15 +14,23 @@ import {
 import { Squash as Hamburger } from "hamburger-react";
 
 const Navbar = () => {
+  const [isOpen, setOpen] = useState(false);
+
   return (
     <header>
       <div className="hamburger">
-        <Hamburger />
+        <Hamburger
+          toggled={isOpen}
+          toggle={setOpen}
+          onToggle={() => {
+            setOpen(isOpen === true ? false : true);
+          }}
+        />
       </div>
 
       <h2>Toan Pham</h2>
 
-      <div className="linksContainer">
+      <div className={`linksContainer ${isOpen ? "active" : ""}`}>
         <nav className="tabs">
           <ul>
             <li>
@@ -40,13 +50,21 @@ const Navbar = () => {
 
         <nav className="socialMedia">
           <ul>
-            <li>
+            <li onClick={() => window.open("https://github.com/toan95dn")}>
               <AiOutlineGithub className="icons" />
             </li>
-            <li>
+            <li
+              onClick={() =>
+                window.open(
+                  "https://www.linkedin.com/in/pham-duc-toan-14338a122/"
+                )
+              }
+            >
               <AiOutlineLinkedin className="icons" />
             </li>
-            <li>
+            <li
+              onClick={() => window.open("https://www.facebook.com/toan95dn")}
+            >
               <AiOutlineFacebook className="icons" />
             </li>
           </ul>
