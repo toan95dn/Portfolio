@@ -15,36 +15,38 @@ const Navbar = () => {
   return (
     <header>
       <h2>Toan Pham</h2>
-      <nav>
-        <ul>
-          <li>
-            <AiOutlineInfoCircle className="icons" />
-            About Me
-          </li>
-          <li>
-            <AiOutlineCode className="icons" />
-            Porfolio
-          </li>
-          <li>
-            <AiOutlineContacts className="icons" />
-            Contact
-          </li>
-        </ul>
-      </nav>
+      <div className="linksContainer">
+        <nav className="tabs">
+          <ul>
+            <li>
+              <AiOutlineInfoCircle className="icons" />
+              About Me
+            </li>
+            <li>
+              <AiOutlineCode className="icons" />
+              Porfolio
+            </li>
+            <li>
+              <AiOutlineContacts className="icons" />
+              Contact
+            </li>
+          </ul>
+        </nav>
 
-      <nav>
-        <ul>
-          <li>
-            <AiOutlineGithub className="icons" />
-          </li>
-          <li>
-            <AiOutlineLinkedin className="icons" />
-          </li>
-          <li>
-            <AiOutlineFacebook className="icons" />
-          </li>
-        </ul>
-      </nav>
+        <nav className="socialMedia">
+          <ul>
+            <li>
+              <AiOutlineGithub className="icons" />
+            </li>
+            <li>
+              <AiOutlineLinkedin className="icons" />
+            </li>
+            <li>
+              <AiOutlineFacebook className="icons" />
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
   );
 };
