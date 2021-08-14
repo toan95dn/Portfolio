@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+$deepBlue: blue;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+  font-family: "Roboto", sans-serif;
+  body {
+    max-width: 100vw;
+    min-height: 100vh;
+
+    ul {
+      list-style-type: none;
+      li {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
