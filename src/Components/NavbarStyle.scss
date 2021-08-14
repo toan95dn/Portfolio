@@ -4,14 +4,16 @@ $layout-breakpoint-medium: 960px;
 header {
   display: grid;
   grid-template-columns: 1.5fr 5.5fr;
+  padding-bottom: 0.25rem;
   width: 100vw;
   height: 5rem;
-  background-color: aquamarine;
+  background-color: #ececec;
   align-items: center;
   font-size: 2rem;
   position: fixed;
   top: 0;
   left: 0;
+  border-bottom: 0.25rem solid #333333;
 
   h2 {
     margin-left: 3rem;
@@ -49,17 +51,17 @@ header {
         li {
           position: relative;
           margin: 0 3rem 0 4rem;
-          height: 4rem;
+          height: 3.5rem;
           width: 14rem;
-          border-bottom: 0.4rem solid black;
+          border-bottom: 0.25rem solid #cccccc;
           &::before {
             position: absolute;
-            bottom: -0.4rem;
+            bottom: -0.25rem;
             left: 0;
             content: "";
             width: 0%;
-            height: 0.4rem;
-            background: red;
+            height: 0.25rem;
+            background: #333333;
             transition: 0.25s;
           }
           &:hover::before {
@@ -93,7 +95,7 @@ header {
 
     .linksContainer {
       visibility: hidden;
-      background-color: gray;
+      background-color: #bbbbbb;
       position: fixed;
       display: grid;
       grid-template-columns: none;
