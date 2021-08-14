@@ -25,7 +25,7 @@ const Navbar = () => {
           <ul>
             <li>
               <AiOutlineInfoCircle className="icons" />
-              About Me
+              About
             </li>
             <li>
               <AiOutlineCode className="icons" />
