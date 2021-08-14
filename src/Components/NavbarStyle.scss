@@ -9,14 +9,22 @@ header {
   background-color: aquamarine;
   align-items: center;
   font-size: 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
 
   h2 {
     margin-left: 3rem;
   }
 
+  .hamburger {
+    display: none;
+  }
+
   .linksContainer {
     display: grid;
     grid-template-columns: 4.5fr 1.5fr;
+    font-weight: bold;
 
     nav {
       display: flex;
@@ -52,9 +60,17 @@ header {
   header {
     display: flex;
     justify-content: center;
-    align-self: center;
+    align-items: center;
+
+    .hamburger {
+      display: block;
+      position: absolute;
+      left: 1rem;
+      top: 0;
+    }
+
     .linksContainer {
-      // visibility: hidden;
+      visibility: hidden;
       background-color: gray;
       position: absolute;
       display: grid;

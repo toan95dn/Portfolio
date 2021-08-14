@@ -1,7 +1,6 @@
 import React from "react";
 
 import NavbarStyle from "./NavbarStyle.scss";
-import { BsInfoCircle, BsCodeSlash, BsPhone } from "react-icons/bs";
 import {
   AiOutlineInfoCircle,
   AiOutlineCode,
@@ -10,11 +9,17 @@ import {
   AiOutlineLinkedin,
   AiOutlineFacebook,
 } from "react-icons/ai";
+import { Squash as Hamburger } from "hamburger-react";
 
 const Navbar = () => {
   return (
     <header>
+      <div className="hamburger">
+        <Hamburger />
+      </div>
+
       <h2>Toan Pham</h2>
+
       <div className="linksContainer">
         <nav className="tabs">
           <ul>
