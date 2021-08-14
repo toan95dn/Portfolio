@@ -4,7 +4,7 @@ import { useState } from "react";
 import NavbarStyle from "./NavbarStyle.scss";
 
 import {
-  AiOutlineInfoCircle,
+  AiOutlineUser,
   AiOutlineCode,
   AiOutlineContacts,
   AiOutlineGithub,
@@ -34,7 +34,7 @@ const Navbar = () => {
         <nav className="tabs">
           <ul>
             <li>
-              <AiOutlineInfoCircle className="icons" />
+              <AiOutlineUser className="icons" />
               About
             </li>
             <li>
