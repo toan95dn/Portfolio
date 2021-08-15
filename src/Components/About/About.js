@@ -16,6 +16,8 @@ import {
   SiJava,
   SiNpm,
   SiFirebase,
+  SiGithub,
+  SiGit,
 } from "react-icons/si";
 
 const About = () => {
@@ -36,6 +38,8 @@ const About = () => {
     <SiBabel color="#f6b800" />,
     <SiNpm color="#ff3021" />,
     <SiFirebase color="#ff9800" />,
+    <SiGit color="#ff2222" />,
+    <SiGithub color="#4caf50" />,
   ];
 
   const listToolsViews = tools.map((tool) => <li key={uniqid()}>{tool}</li>);
@@ -66,15 +70,22 @@ const About = () => {
             }}
           />
         </div>
-        <p>
-          I am currently a first year transfer student at UC San Diego. I am
-          looking for an internship to improve my knowledge in software and web
-          development. Besides studying at school, I like to expand my knowledge
-          by doing side projects. Outside of coding, I love playing the guitar
-          and working out.
-        </p>
 
-        <ul className="skillsContainer">{listToolsViews}</ul>
+        <div>
+          <h2>About Me</h2>
+          <p>
+            I am currently a first year transfer student at UC San Diego. I am
+            looking for an internship to improve my knowledge in software and
+            web development. Besides studying at school, I like to expand my
+            knowledge by doing side projects. Outside of coding, I love playing
+            the guitar and working out.
+          </p>
+        </div>
+
+        <div>
+          <h2>Skills</h2>
+          <ul className="skillsContainer">{listToolsViews}</ul>
+        </div>
       </div>
     </div>
   );
