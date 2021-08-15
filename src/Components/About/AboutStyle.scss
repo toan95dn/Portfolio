@@ -54,6 +54,11 @@ $layout-breakpoint-small: 600px;
       line-height: 7rem;
       border-bottom: 0.5rem solid #66666647;
     }
+
+    .Typewriter__cursor {
+      color: #bbbbbb;
+    }
+
     .skillsContainer {
       display: flex;
       justify-content: center;

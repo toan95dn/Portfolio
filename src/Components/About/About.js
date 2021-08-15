@@ -56,6 +56,7 @@ const About = () => {
               loop: true,
               stringSplitter: currStringSplitter,
               color: "red",
+              cursorClassName: "Typewriter__cursor",
             }}
             onInit={(typewriter) => {
               typewriter
