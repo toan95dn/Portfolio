@@ -1,7 +1,7 @@
 import React from "react";
 
 import Navbar from "./Navbar";
-import About from "./About";
+import About from "./About/About";
 
 import AppStyle from "./AppStyle.scss";
 
