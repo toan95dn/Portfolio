@@ -26,7 +26,7 @@ $layout-breakpoint-medium: 960px;
       display: flex;
       align-items: flex-end;
       justify-content: center;
-      height: 7rem;
+      line-height: 7rem;
       border-bottom: 0.2rem solid slategray;
     }
     .skillsContainer {
@@ -34,6 +34,15 @@ $layout-breakpoint-medium: 960px;
       flex-wrap: wrap;
       font-size: 4rem;
       max-width: 100%;
+      padding: 1rem;
+      li {
+        width: 6rem;
+        height: 6rem;
+        transition: 0.25s;
+        &:hover {
+          font-size: 5.5rem;
+        }
+      }
     }
   }
 }

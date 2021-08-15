@@ -23,6 +23,8 @@ const About = () => {
     return splitter.splitGraphemes(string);
   };
 
+  const tools = [];
+
   return (
     <div className="aboutContainer">
       <img src={Avatar} alt="" />
@@ -58,17 +60,39 @@ const About = () => {
         </p>
 
         <ul className="skillsContainer">
-          <SiCplusplus color="#009688" />
-          <SiJava color="#f44336" />
-          <SiJavascript color="#f7df1e" />
-          <SiReact color="#03a9f4" />
-          <SiCss3 color="#ffeb3b" />
-          <SiHtml5 color="#ff9800" />
-          <SiSass color="#ff4f6e" />
-          <SiWebpack color="#03a9f4" />
-          <SiBabel color="#f6b800" />
-          <SiNpm color="#ff3021" />
-          <SiFirebase color="#ff9800" />
+          <li>
+            <SiCplusplus color="#009688" />
+          </li>
+          <li>
+            <SiJava color="#f44336" />
+          </li>
+          <li>
+            <SiJavascript color="#f7df1e" />
+          </li>
+          <li>
+            <SiReact color="#03a9f4" />
+          </li>
+          <li>
+            <SiCss3 color="#ffeb3b" />
+          </li>
+          <li>
+            <SiHtml5 color="#ff9800" />
+          </li>
+          <li>
+            <SiSass color="#ff4f6e" />
+          </li>
+          <li>
+            <SiWebpack color="#03a9f4" />
+          </li>
+          <li>
+            <SiBabel color="#f6b800" />
+          </li>
+          <li>
+            <SiNpm color="#ff3021" />
+          </li>
+          <li>
+            <SiFirebase color="#ff9800" />
+          </li>
         </ul>
       </div>
     </div>
