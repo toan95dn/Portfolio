@@ -43,7 +43,7 @@ const Navbar = () => {
             </li>
             <li>
               <AiOutlineCode className="icons" />
-              Porfolio
+              Portfolio
             </li>
             <li>
               <AiOutlineContacts className="icons" />

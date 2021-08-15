@@ -80,11 +80,11 @@ const About = () => {
         <div>
           <h2>About Me</h2>
           <p>
-            I am currently student at UC San Diego. I am looking for an
-            internship to improve my knowledge in software and web development.
-            Besides studying at school, I like to expand my knowledge by doing
-            side projects. Outside of coding, I love playing the guitar and
-            working out.
+            I am currently a computer science student at UC San Diego. I am
+            looking for an internship to improve my knowledge in software and
+            web development. Besides studying at school, I like to expand my
+            knowledge by doing side projects. Outside of coding, I love playing
+            the guitar and working out.
           </p>
         </div>
 

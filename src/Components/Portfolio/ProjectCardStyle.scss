@@ -1,0 +1,52 @@
+.card {
+  width: 40rem;
+  height: 40rem;
+  font-size: 1.5rem;
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-rows: 19rem 1fr 2fr 1fr 1fr;
+  border: 0.25rem solid gray;
+  margin: 6rem;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+  }
+
+  h2 {
+    display: flex;
+    align-items: center;
+    padding-left: 0.5rem;
+  }
+
+  p {
+    padding: 0.5rem;
+  }
+
+  .buttonsContainer {
+    display: flex;
+    button {
+      cursor: pointer;
+      border: none;
+      width: 100%;
+      height: 100%;
+      font-size: 1.75rem;
+      font-weight: bold;
+      color: white;
+      &.demo {
+        background-color: #ff5722d4;
+        &:hover {
+          background-color: #ff5722;
+        }
+      }
+      &.code {
+        background-color: #2196f3d6;
+        &:hover {
+          background-color: #2196f3;
+        }
+      }
+    }
+  }
+}
