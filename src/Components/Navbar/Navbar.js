@@ -10,6 +10,7 @@ import {
   AiOutlineGithub,
   AiOutlineLinkedin,
   AiOutlineFacebook,
+  AiOutlineCodepen,
 } from "react-icons/ai";
 import { Squash as Hamburger } from "hamburger-react";
 
@@ -28,7 +29,10 @@ const Navbar = () => {
         />
       </div>
 
-      <h2>Toan Pham</h2>
+      <h2>
+        <AiOutlineCodepen />
+        Toan Pham
+      </h2>
 
       <div className={`linksContainer ${isOpen ? "active" : ""}`}>
         <nav className="tabs">
