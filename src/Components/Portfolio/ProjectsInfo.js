@@ -27,7 +27,7 @@ const todoListProject = new Project(
   todoImg,
   "To-Do List",
   "Allows users to create/move/delete tasks and group them in projects. Side panel can filter tasks due today/week. Integrates Firebase for user authentication and database.",
-  ["Javascript", "Css", "Firebase", "Webpack", "Babel"],
+  ["Javascript", "CSS", "Firebase", "Webpack", "Babel"],
   "https://github.com/toan95dn/BetterTodoApp",
   "https://toan95dn.github.io/BetterTodoApp/"
 );
@@ -45,7 +45,7 @@ const tictactoeProject = new Project(
   tictactoeImg,
   "Tictactoe w/Minimax",
   "Tictactoe game with 3 modes (2 players, vs Computer (easy), and vs Computer (unbeatable). The unbeatable mode applies minimax algorithm to calculate the best move.",
-  ["Javascript", "Css"],
+  ["Javascript", "CSS"],
   "https://github.com/toan95dn/TicTacToe-minimax",
   "https://toan95dn.github.io/TicTacToe-minimax/"
 );
@@ -54,7 +54,7 @@ const restaurantProject = new Project(
   restaurantImg,
   "Restaurant Page",
   "A webpage for a fake restaurant. I built this to practice my DOM skills and Webpack.",
-  ["Javascript", "Css", "Webpack"],
+  ["Javascript", "CSS", "Webpack"],
   "https://github.com/toan95dn/RestaurantPage",
   "https://toan95dn.github.io/RestaurantPage/"
 );

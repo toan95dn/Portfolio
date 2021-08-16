@@ -1,4 +1,3 @@
-$layout-breakpoint-medium: 1100px;
 $layout-breakpoint-small: 780px;
 .portfolioContainer {
   background-color: #81d4fa;
@@ -7,17 +6,9 @@ $layout-breakpoint-small: 780px;
   flex-direction: column;
   .projectContainer {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     justify-items: center;
     gap: 2vw;
-  }
-}
-
-@media (max-width: $layout-breakpoint-medium) {
-  .portfolioContainer {
-    .projectContainer {
-      grid-template-columns: repeat(2, 1fr);
-    }
   }
 }
 
