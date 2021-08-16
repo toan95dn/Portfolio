@@ -60,11 +60,11 @@ const restaurantProject = new Project(
 );
 
 const Projects = [
-  pathFindingProject,
   todoListProject,
+  pathFindingProject,
   icemanProject,
-  tictactoeProject,
   restaurantProject,
+  tictactoeProject,
 ];
 
 export default Projects;

@@ -14,8 +14,8 @@ const Portfolio = () => {
   });
   return (
     <div className="portfolioContainer">
-      {/* <h2>Portfolio</h2>
-      <ul className="filterContainer">
+      <h1>Portfolio</h1>
+      {/* <ul className="filterContainer">
         <li>All</li>
         <li>FullStack</li>
         <li>C++</li>

@@ -1,8 +1,5 @@
 import React from "react";
-import sampleImage from "../Images/pathFinding.jpg";
-
 import ProjectCardStyle from "./ProjectCardStyle.scss";
-import pathFindingProject from "./ProjectsInfo";
 
 const ProjectCard = ({ project }) => {
   let allToolsUsed = "";

@@ -4,11 +4,11 @@ $layout-breakpoint-small: 780px;
 .card {
   width: 45vw;
   height: 45vw;
-  font-size: 1.65vw;
+  font-size: 1.3vw;
   display: grid;
   grid-template-columns: 1;
   grid-template-rows: 22.5vw 1fr 2fr 1fr 1fr;
-  background-color: bisque;
+  background-color: #eeeeee;
   border-radius: 1rem;
   padding: 1.5vw;
   img {
@@ -59,11 +59,16 @@ $layout-breakpoint-small: 780px;
   }
 }
 
+@media (max-width: $layout-breakpoint-medium) {
+  .card {
+    font-size: 1.5vw;
+  }
+}
 @media (max-width: $layout-breakpoint-small) {
   .card {
     width: 90vw;
     height: 90vw;
-    font-size: 3.3vw;
+    font-size: 3vw;
     padding: 3vw;
     grid-template-rows: 45vw 1fr 2fr 1fr 1fr;
     .buttonsContainer {
