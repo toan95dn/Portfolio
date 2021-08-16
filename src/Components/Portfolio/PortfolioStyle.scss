@@ -1,0 +1,30 @@
+$layout-breakpoint-medium: 1100px;
+$layout-breakpoint-small: 780px;
+.portfolioContainer {
+  background-color: #333333d1;
+  padding: 7rem 0 5rem 0;
+  display: flex;
+  flex-direction: column;
+  .projectContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: 2vw;
+  }
+}
+
+@media (max-width: $layout-breakpoint-medium) {
+  .portfolioContainer {
+    .projectContainer {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media (max-width: $layout-breakpoint-small) {
+  .portfolioContainer {
+    .projectContainer {
+      grid-template-columns: none;
+    }
+  }
+}

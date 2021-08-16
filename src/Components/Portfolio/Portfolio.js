@@ -2,6 +2,7 @@ import React from "react";
 import Projects from "./ProjectsInfo";
 import ProjectCard from "./ProjectCard";
 import uniqid from "uniqid";
+import PorfolioStyle from "./PortfolioStyle.scss";
 
 const Portfolio = () => {
   const listProjects = Projects.map((currProject) => {
@@ -13,7 +14,7 @@ const Portfolio = () => {
   });
   return (
     <div className="portfolioContainer">
-      <h2>Portfolio</h2>
+      {/* <h2>Portfolio</h2>
       <ul className="filterContainer">
         <li>All</li>
         <li>FullStack</li>
@@ -21,7 +22,7 @@ const Portfolio = () => {
         <li>Javascript</li>
         <li>React</li>
         <li>FireBase</li>
-      </ul>
+      </ul> */}
       <ul className="projectContainer">{listProjects}</ul>
     </div>
   );
