@@ -40,19 +40,19 @@ $layout-breakpoint-small: 780px;
       width: 95%;
       height: 95%;
       border-radius: 1rem;
-      font-size: 2vw;
+      font-size: 1.7vw;
       font-weight: bold;
       color: white;
       &.demo {
-        background-color: #ff5722d4;
+        background-color: #ff5722bd;
         &:hover {
           background-color: #ff5722;
         }
       }
       &.code {
-        background-color: #2196f3d6;
+        background-color: #9e9e9ec7;
         &:hover {
-          background-color: #2196f3;
+          background-color: #9e9e9e;
         }
       }
     }

@@ -11,7 +11,9 @@ const ProjectCard = ({ project }) => {
       <img src={project.imageSource} alt="" />
       <h2>{project.title}</h2>
       <p>{project.detail}</p>
-      <p>Built with: {allToolsUsed}</p>
+      <p>
+        <b>Built with:</b> {allToolsUsed}
+      </p>
       <div className="buttonsContainer">
         <button
           className="code"
