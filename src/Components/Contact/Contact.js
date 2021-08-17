@@ -1,5 +1,6 @@
 import React from "react";
 import ContactStyle from "./ContactStyle.scss";
+import ContactForm from "./ContactForm";
 import { FiPhoneCall, FiMapPin, FiMail, FiCheckCircle } from "react-icons/fi";
 
 const Contact = () => {
@@ -40,17 +41,7 @@ const Contact = () => {
         </li>
       </ul>
 
-      <form action="">
-        <label>
-          Name:
-          <input type="text" name="name" />
-        </label>
-        <label>
-          Name:
-          <input type="email" name="email" />
-        </label>
-        <input type="submit" value="Submit" />
-      </form>
+      <ContactForm />
     </div>
   );
 };
