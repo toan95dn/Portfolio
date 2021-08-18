@@ -30,7 +30,7 @@ const Navbar = () => {
       </div>
 
       <h2>
-        <AiOutlineCodepen color="#ff5722" />
+        <AiOutlineCodepen color="#0099e5" />
         Toan Pham
       </h2>
 
