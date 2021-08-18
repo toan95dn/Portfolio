@@ -28,7 +28,7 @@ const ContactForm = () => {
         e.preventDefault();
       }}
     >
-      <h2>Contact me to turn your ideas into reality!</h2>
+      <h2>Wanna turn your ideas into reality?</h2>
 
       <div className="inputContainer">
         <div className="shortInputs">

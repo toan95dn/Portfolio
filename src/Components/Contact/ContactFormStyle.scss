@@ -1,10 +1,12 @@
+$layout-breakpoint-small: 800px;
+
 form {
   margin-top: 3rem;
   width: 80%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  height: 36rem;
+  height: 44rem;
 
   h2 {
     font-size: 2.2rem;
@@ -18,7 +20,6 @@ form {
     display: flex;
     justify-content: space-between;
     height: 16rem;
-    margin-top: 2rem;
 
     .shortInputs {
       display: flex;
@@ -71,6 +72,28 @@ form {
     &:hover {
       color: white;
       background-color: #0099e5;
+    }
+  }
+}
+
+@media (max-width: $layout-breakpoint-small) {
+  form {
+    height: 60rem;
+    .inputContainer {
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      height: 33rem;
+      textarea {
+        width: 100%;
+        width: 100%;
+        height: 14rem;
+      }
+
+      .shortInputs {
+        width: 100%;
+        height: 15rem;
+      }
     }
   }
 }

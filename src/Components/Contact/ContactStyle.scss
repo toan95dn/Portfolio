@@ -1,3 +1,5 @@
+$layout-breakpoint-small: 800px;
+
 .contactContainer {
   padding-top: 5rem;
   display: flex;
@@ -45,6 +47,20 @@
       &:hover {
         box-shadow: 0 1rem 1rem rgb(230, 230, 230);
         transform: translateY(-0.5rem);
+      }
+    }
+  }
+}
+
+@media (max-width: $layout-breakpoint-small) {
+  .contactContainer {
+    .infoContainer {
+      flex-direction: column;
+      justify-content: space-between;
+      li {
+        width: 100%;
+        font-size: 2rem;
+        margin-bottom: 1rem;
       }
     }
   }
