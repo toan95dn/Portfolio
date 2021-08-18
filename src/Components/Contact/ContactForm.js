@@ -2,11 +2,32 @@ import React from "react";
 import { useState } from "react";
 import ContactFormStyle from "./ContactFormStyle.scss";
 import ReCAPTCHA from "react-google-recaptcha";
+import emailjs from "emailjs-com";
 
 const ContactForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+
+  function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_upwl3hi",
+        "template_l1n2cqs",
+        e.target,
+        "user_8nC2EfLLyZcIMh0SwPfJf"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  }
 
   function handleEmailInput(e) {
     setEmail(e.target.value);
@@ -26,6 +47,7 @@ const ContactForm = () => {
       noValidate
       onSubmit={(e) => {
         e.preventDefault();
+        // sendEmail(e);
       }}
     >
       <h2>Wanna turn your ideas into reality?</h2>
@@ -62,7 +84,7 @@ const ContactForm = () => {
         sitekey="6LdbcwocAAAAAFDs4fPZFm8FtmFDcmc8hOZ-17Lo"
         onChange={onChange}
       />
-      <input type="submit" value="Submit" id="submitButton" />
+      <input type="submit" value="Send" id="submitButton" />
     </form>
   );
 };

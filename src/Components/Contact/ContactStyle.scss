@@ -43,6 +43,7 @@ $layout-breakpoint-small: 800px;
       .icons {
         font-size: 5rem;
         color: #bcbcbc;
+        stroke-width: 0.1rem;
       }
       &:hover {
         box-shadow: 0 1rem 1rem rgb(230, 230, 230);
