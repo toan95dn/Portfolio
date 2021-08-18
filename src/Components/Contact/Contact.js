@@ -22,8 +22,6 @@ const Contact = () => {
       <h1>Contact</h1>
       <div className="mapContainer">{myMap}</div>
 
-      <h2>Have a project in mind?</h2>
-
       <ul className="infoContainer">
         <li>
           <FiPhoneCall className="icons" />

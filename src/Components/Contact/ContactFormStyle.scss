@@ -1,3 +1,76 @@
 form {
+  margin-top: 3rem;
   width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 36rem;
+
+  h2 {
+    font-size: 2.2rem;
+    line-height: 3.5rem;
+    color: #333333;
+    text-decoration: underline 0.25rem solid #0099e5;
+    text-underline-offset: 0.5rem;
+  }
+
+  .inputContainer {
+    display: flex;
+    justify-content: space-between;
+    height: 16rem;
+    margin-top: 2rem;
+
+    .shortInputs {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 40%;
+    }
+
+    textarea {
+      color: #666666;
+      font-size: 1.5rem;
+      font-family: inherit;
+      width: 55%;
+      height: 100%;
+      resize: vertical;
+      padding: 1rem;
+      outline: none;
+      border: 0.15rem solid #dfdfdf;
+      &::placeholder {
+        font-size: 1.5rem;
+      }
+    }
+
+    input {
+      color: #666666;
+      font-size: 1.5rem;
+      padding: 1rem;
+      height: 4rem;
+      outline: none;
+      border: 0.15rem solid #dfdfdf;
+
+      &::placeholder {
+        font-size: 1.5rem;
+        margin-left: 1rem;
+      }
+
+      &:focus {
+        border-bottom: 0.2rem solid #0099e5;
+      }
+    }
+  }
+
+  #submitButton {
+    width: 16.5rem;
+    height: 4.25rem;
+    font-size: 1.5rem;
+    background-color: inherit;
+    border: 0.2rem solid #0099e5;
+    transition: 0.5s;
+    &:hover {
+      color: white;
+      background-color: #0099e5;
+    }
+  }
 }

@@ -28,22 +28,41 @@ const ContactForm = () => {
         e.preventDefault();
       }}
     >
-      <input type="text" name="name" required={true} placeholder="Full name" />
-      <input
-        type="email"
-        name="email"
-        required="true"
-        placeholder="Email adress"
+      <h2>Contact me to turn your ideas into reality!</h2>
+
+      <div className="inputContainer">
+        <div className="shortInputs">
+          <input
+            type="text"
+            name="name"
+            required={true}
+            placeholder="Full name"
+          />
+          <input
+            type="email"
+            name="email"
+            required={true}
+            placeholder="Email adress"
+          />
+          <input
+            type="text"
+            name="subject"
+            required={true}
+            placeholder="Subject"
+          />
+        </div>
+        <textarea
+          type="text"
+          name="message"
+          required={true}
+          placeholder="Message"
+        />
+      </div>
+      <ReCAPTCHA
+        sitekey="6LdbcwocAAAAAFDs4fPZFm8FtmFDcmc8hOZ-17Lo"
+        onChange={onChange}
       />
-      <input type="text" name="subject" required={true} placeholder="Subject" />
-      <textarea
-        type="text"
-        name="message"
-        required={true}
-        placeholder="Message"
-      />
-      <ReCAPTCHA sitekey="Your client site key" onChange={onChange} />,
-      <input type="submit" value="Submit" />
+      <input type="submit" value="Submit" id="submitButton" />
     </form>
   );
 };
