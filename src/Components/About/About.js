@@ -27,19 +27,19 @@ const About = () => {
   };
 
   const tools = [
-    <SiCplusplus color="#009688" />,
-    <SiJava color="#f44336" />,
-    <SiJavascript color="#f7df1e" />,
-    <SiReact color="#03a9f4" />,
-    <SiCss3 color="#ffeb3b" />,
-    <SiHtml5 color="#ff9800" />,
-    <SiSass color="#ff4f6e" />,
-    <SiWebpack color="#03a9f4" />,
-    <SiBabel color="#f6b800" />,
-    <SiNpm color="#ff3021" />,
-    <SiFirebase color="#ff9800" />,
-    <SiGit color="#ff2222" />,
-    <SiGithub color="#4caf50" />,
+    <SiCplusplus />,
+    <SiJava />,
+    <SiJavascript />,
+    <SiReact />,
+    <SiCss3 />,
+    <SiHtml5 />,
+    <SiSass />,
+    <SiWebpack />,
+    <SiBabel />,
+    <SiNpm />,
+    <SiFirebase />,
+    <SiGit />,
+    <SiGithub />,
   ];
 
   const listToolsViews = tools.map((tool) => <li key={uniqid()}>{tool}</li>);
@@ -65,7 +65,9 @@ const About = () => {
                 )
                 .pauseFor(1200)
                 .deleteAll()
-                .typeString(`<strong style="color: #0099e5">Coder 💻</strong>`)
+                .typeString(
+                  `<strong style="color: #0099e5">Developer 💻</strong>`
+                )
                 .pauseFor(1200)
                 .deleteAll()
                 .typeString(
@@ -80,14 +82,13 @@ const About = () => {
         <div>
           <h3>About Me</h3>
           <p>
-            Hi, my name is Toan (But everyone calls me Duc, which is my middle
-            name, because of a mistake in my visa when I immigrated to the US).
-            I am currently a computer science student at UC San Diego. Besides
-            studying at school, I love to expand my knowledge by doing side
-            projects. <br /> <br />I can design and build web/desktop
-            applications. I love to make my app interactive, responsive,
-            structured, and my code quality high. Thus, sometimes, I spend lots
-            of time fixing details and thinking about optimizing my code.
+            Hi, my name is Toan. I am currently a computer science student at UC
+            San Diego. Besides studying at school, I love to expand my knowledge
+            by doing side projects. <br /> <br />I can design and build
+            web/desktop applications. I love to make my app interactive,
+            responsive, structured, and my code quality high. Thus, sometimes, I
+            spend lots of time fixing details and thinking about optimizing my
+            code.
             <br />
             <br /> Now, I am looking for an internship to gain more experience
             in software development as well as team collaboration skills. I am
