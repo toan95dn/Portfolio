@@ -9,6 +9,8 @@ const ContactForm = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
+  const [isHuman, setHuman] = useState(false);
+
   function sendEmail(e) {
     e.preventDefault();
 
@@ -38,8 +40,9 @@ const ContactForm = () => {
 
   function handleMessageInput(e) {}
 
-  function onChange(value) {
-    console.log("Captcha value:", value);
+  function toggleIsHuman() {
+    let currStatus = isHuman ? false : true;
+    setHuman(currStatus);
   }
 
   return (
@@ -48,6 +51,7 @@ const ContactForm = () => {
       onSubmit={(e) => {
         e.preventDefault();
         // sendEmail(e);
+        console.log(isHuman);
       }}
     >
       <h2>Wanna turn your ideas into reality?</h2>
@@ -81,8 +85,8 @@ const ContactForm = () => {
         />
       </div>
       <ReCAPTCHA
-        sitekey="6LdbcwocAAAAAFDs4fPZFm8FtmFDcmc8hOZ-17Lo"
-        onChange={onChange}
+        sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+        onChange={toggleIsHuman}
       />
       <input type="submit" value="Send" id="submitButton" />
     </form>
