@@ -1,10 +1,10 @@
 import "./StatusMessageStyle.scss";
-import React, { useState } from "react";
+import React from "react";
 
 const StatusMessage = ({ isError, messages, isDisplayed }) => {
   return (
     <p
-      className={`statusMessage ${isError ? "successful" : "failure"} ${
+      className={`statusMessage ${isError ? "failure" : "successful"} ${
         isDisplayed ? "active" : ""
       }`}
     >

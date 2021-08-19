@@ -1,15 +1,11 @@
 import React from "react";
 import { useState } from "react";
-import ContactFormStyle from "./ContactFormStyle.scss";
 import ReCAPTCHA from "react-google-recaptcha";
 import emailjs from "emailjs-com";
 import StatusMessage from "./StatusMessage";
+import ContactFormStyle from "./ContactFormStyle.scss";
 
 const ContactForm = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-
   //set message display if there's any error or show status of submission
   const [isHuman, setHuman] = useState(false);
   const [isSuccessfullySubmited, setSubmited] = useState(false);
@@ -28,26 +24,22 @@ const ContactForm = () => {
       .then(
         (result) => {
           setSubmited(true);
+          setDisplay(true);
           setDisplayedMessage("Thank you! I'll contact you soon");
         },
         (error) => {
           setSubmited(false);
-          set;
+          setDisplayedMessage("Sorry, please try again");
         }
       );
-  }
-
-  function handleEmailInput(e) {
-    setEmail(e.target.value);
-    if (validateEmail(e.target.value)) {
-      console.log("yelp");
-    }
   }
 
   function toggleIsHuman() {
     let currStatus = isHuman ? false : true;
     if (currStatus) {
       setDisplay(false); //Captcha verified. Turn off the message confirm not robot
+    } else {
+      setDisplayedMessage("Please confirm that you are not a robot");
     }
     setHuman(currStatus);
   }
@@ -56,9 +48,8 @@ const ContactForm = () => {
     e.preventDefault();
 
     if (isHuman === true) {
-      setDisplayedMessage("Thank you");
-      setDisplay(true);
-      setSubmited(true);
+      sendEmail(e);
+      e.target.reset();
     } else {
       setDisplayedMessage("Please confirm that you are not a robot");
       setDisplay(true);
@@ -99,7 +90,7 @@ const ContactForm = () => {
       </div>
 
       <StatusMessage
-        isError={isHuman && isSuccessfullySubmited}
+        isError={!(isHuman && isSuccessfullySubmited)}
         messages={displayedMessage}
         isDisplayed={isDisplayed}
       />
