@@ -12,8 +12,8 @@ const App = () => {
     <div>
       <Navbar />
       <About />
-      {/* <Portfolio />
-      <Contact /> */}
+      {/* <Portfolio /> */}
+      {/* <Contact /> */}
     </div>
   );
 };
