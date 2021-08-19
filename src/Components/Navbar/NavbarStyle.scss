@@ -78,7 +78,7 @@ header {
 
     .socialMedia {
       ul {
-        width: 100%;
+        width: 60%;
         justify-content: space-evenly;
       }
     }
@@ -117,7 +117,7 @@ header {
       font-size: 2.5rem;
       transition: 0.25s;
       z-index: 1;
-      box-shadow: 0.5rem 0 0.5rem -0.25rem rgba(0, 0, 0, 0.18);
+      box-shadow: 7px 0 6px -2.5px rgba(0, 0, 0, 0.15);
       &.active {
         visibility: visible;
         transform: translateX(0);
