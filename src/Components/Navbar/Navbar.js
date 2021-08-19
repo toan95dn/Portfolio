@@ -6,7 +6,7 @@ import NavbarStyle from "./NavbarStyle.scss";
 import {
   AiOutlineUser,
   AiOutlineCode,
-  AiOutlineContacts,
+  AiOutlineMail,
   AiOutlineGithub,
   AiOutlineLinkedin,
   AiOutlineFacebook,
@@ -39,15 +39,15 @@ const Navbar = () => {
           <ul>
             <li>
               <AiOutlineUser className="icons" />
-              About
+              &nbsp;About
             </li>
             <li>
               <AiOutlineCode className="icons" />
-              Portfolio
+              &nbsp;Portfolio
             </li>
             <li>
-              <AiOutlineContacts className="icons" />
-              Contact
+              <AiOutlineMail className="icons" />
+              &nbsp;Contact
             </li>
           </ul>
         </nav>
