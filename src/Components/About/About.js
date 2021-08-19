@@ -61,15 +61,15 @@ const About = () => {
             onInit={(typewriter) => {
               typewriter
                 .typeString(
-                  `<strong style="color: #ff5722"> CS student 👨‍🎓</strong>`
+                  `<strong style="color: #0099e5"> CS student 👨‍🎓</strong>`
                 )
                 .pauseFor(1200)
                 .deleteAll()
-                .typeString(`<strong style="color: #ff5722">Coder 💻</strong>`)
+                .typeString(`<strong style="color: #0099e5">Coder 💻</strong>`)
                 .pauseFor(1200)
                 .deleteAll()
                 .typeString(
-                  `<strong style="color: #ff5722">Guitar player 🎸</strong>`
+                  `<strong style="color: #0099e5">Guitar player 🎸</strong>`
                 )
                 .pauseFor(1200)
                 .start();
@@ -78,18 +78,18 @@ const About = () => {
         </div>
 
         <div>
-          <h2>About Me</h2>
+          <h3>About Me</h3>
           <p>
-            I am currently a computer science student at UC San Diego. I am
-            looking for an internship to improve my knowledge in software and
-            web development. Besides studying at school, I like to expand my
-            knowledge by doing side projects. Outside of coding, I love playing
-            the guitar and working out.
+            Hi, my name is Toan. I am currently a computer science student at UC
+            San Diego. I am looking for an internship to improve my knowledge in
+            software and web development. Besides studying at school, I like to
+            expand my knowledge by doing side projects. Outside of coding, I
+            love playing the guitar and working out.
           </p>
         </div>
 
         <div>
-          <h2>Skills</h2>
+          <h3>Skills</h3>
           <ul className="skillsContainer">{listToolsViews}</ul>
         </div>
       </div>

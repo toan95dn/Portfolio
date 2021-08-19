@@ -25,7 +25,7 @@ const ContactForm = () => {
         (result) => {
           setSubmited(true);
           setDisplay(true);
-          setDisplayedMessage("Thank you! I'll contact you soon");
+          setDisplayedMessage("Thank you, I'll get back to you soon!");
         },
         (error) => {
           setSubmited(false);
