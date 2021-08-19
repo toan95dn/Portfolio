@@ -3,17 +3,21 @@ import { useState } from "react";
 import ContactFormStyle from "./ContactFormStyle.scss";
 import ReCAPTCHA from "react-google-recaptcha";
 import emailjs from "emailjs-com";
+import StatusMessage from "./StatusMessage";
 
 const ContactForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
+  //set message display if there's any error or show status of submission
   const [isHuman, setHuman] = useState(false);
+  const [isSuccessfullySubmited, setSubmited] = useState(false);
+  const [isDisplayed, setDisplay] = useState(false);
+  const [displayedMessage, setDisplayedMessage] = useState("");
 
   function sendEmail(e) {
     e.preventDefault();
-
     emailjs
       .sendForm(
         "service_upwl3hi",
@@ -23,10 +27,12 @@ const ContactForm = () => {
       )
       .then(
         (result) => {
-          console.log(result.text);
+          setSubmited(true);
+          setDisplayedMessage("Thank you! I'll contact you soon");
         },
         (error) => {
-          console.log(error.text);
+          setSubmited(false);
+          set;
         }
       );
   }
@@ -38,22 +44,29 @@ const ContactForm = () => {
     }
   }
 
-  function handleMessageInput(e) {}
-
   function toggleIsHuman() {
     let currStatus = isHuman ? false : true;
+    if (currStatus) {
+      setDisplay(false); //Captcha verified. Turn off the message confirm not robot
+    }
     setHuman(currStatus);
   }
 
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    if (isHuman === true) {
+      setDisplayedMessage("Thank you");
+      setDisplay(true);
+      setSubmited(true);
+    } else {
+      setDisplayedMessage("Please confirm that you are not a robot");
+      setDisplay(true);
+    }
+  }
+
   return (
-    <form
-      noValidate
-      onSubmit={(e) => {
-        e.preventDefault();
-        // sendEmail(e);
-        console.log(isHuman);
-      }}
-    >
+    <form onSubmit={handleSubmit}>
       <h2>Wanna turn your ideas into reality?</h2>
 
       <div className="inputContainer">
@@ -84,10 +97,18 @@ const ContactForm = () => {
           placeholder="Message"
         />
       </div>
+
+      <StatusMessage
+        isError={isHuman && isSuccessfullySubmited}
+        messages={displayedMessage}
+        isDisplayed={isDisplayed}
+      />
+
       <ReCAPTCHA
         sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
         onChange={toggleIsHuman}
       />
+
       <input type="submit" value="Send" id="submitButton" />
     </form>
   );
