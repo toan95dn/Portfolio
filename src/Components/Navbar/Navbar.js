@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 import NavbarStyle from "./NavbarStyle.scss";
 
@@ -38,16 +39,22 @@ const Navbar = () => {
         <nav className="tabs">
           <ul>
             <li>
-              <AiOutlineUser className="icons" />
-              &nbsp;About
+              <Link to="/About" onClick={() => console.log("jjjj")}>
+                <AiOutlineUser className="icons" />
+                &nbsp;About
+              </Link>
             </li>
             <li>
-              <AiOutlineCode className="icons" />
-              &nbsp;Portfolio
+              <Link to="/Portfolio">
+                <AiOutlineCode className="icons" />
+                &nbsp;Portfolio
+              </Link>
             </li>
             <li>
-              <AiOutlineMail className="icons" />
-              &nbsp;Contact
+              <Link to="/Contact">
+                <AiOutlineMail className="icons" />
+                &nbsp;Contact
+              </Link>
             </li>
           </ul>
         </nav>

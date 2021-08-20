@@ -4,13 +4,14 @@ $layout-breakpoint-small: 780px;
 .card {
   width: 45vw;
   height: 45vw;
-  font-size: 1.3vw;
+  font-size: 1.75rem;
   display: grid;
   grid-template-columns: 1;
   grid-template-rows: 22.5vw 1fr 2fr 1fr 1fr;
-  background-color: #eeeeee;
-  border-radius: 1rem;
+  background-color: #ffffff;
+  border: 0.1rem solid #dfdfdf;
   padding: 1.5vw;
+  color: #666666;
   img {
     width: 100%;
     height: 100%;
@@ -21,8 +22,8 @@ $layout-breakpoint-small: 780px;
     display: flex;
     align-items: center;
     padding-left: 0.5rem;
-    color: #ff5722;
-    border-bottom: 0.25rem solid #ff572275;
+    color: #0099e5;
+    border-bottom: 0.1rem solid #dfdfdf;
   }
 
   p {
@@ -61,19 +62,18 @@ $layout-breakpoint-small: 780px;
 
 @media (max-width: $layout-breakpoint-medium) {
   .card {
-    font-size: 1.5vw;
+    font-size: 1.75rem;
   }
 }
 @media (max-width: $layout-breakpoint-small) {
   .card {
     width: 90vw;
-    height: 90vw;
-    font-size: 3vw;
+    min-height: 150vw;
     padding: 3vw;
     grid-template-rows: 45vw 1fr 2fr 1fr 1fr;
     .buttonsContainer {
       button {
-        font-size: 4vw;
+        font-size: 1.75rem;
       }
     }
   }
