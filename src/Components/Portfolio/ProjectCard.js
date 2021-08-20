@@ -9,28 +9,32 @@ const ProjectCard = ({ project }) => {
   return (
     <div className="card">
       <img src={project.imageSource} alt="" />
-      <h2>{project.title}</h2>
-      <p>{project.detail}</p>
-      <p>
-        <b>Built with:</b> {allToolsUsed}
-      </p>
-      <div className="buttonsContainer">
-        <button
-          className="code"
-          onClick={() => {
-            window.open(project.githubLink);
-          }}
-        >
-          Code
-        </button>
-        <button
-          className="demo"
-          onClick={() => {
-            window.open(project.demoLink);
-          }}
-        >
-          Demo
-        </button>
+      <div className="projectInfo">
+        <div className="projectDescsription">
+          <h2>{project.title}</h2>
+          <p>{project.detail}</p>
+          <p>
+            <b>Built with:</b> {allToolsUsed}
+          </p>
+        </div>
+        <div className="buttonsContainer">
+          <button
+            className="code"
+            onClick={() => {
+              window.open(project.githubLink);
+            }}
+          >
+            Code
+          </button>
+          <button
+            className="demo"
+            onClick={() => {
+              window.open(project.demoLink);
+            }}
+          >
+            Demo
+          </button>
+        </div>
       </div>
     </div>
   );
