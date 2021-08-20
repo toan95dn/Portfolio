@@ -23,6 +23,10 @@ const Navbar = () => {
     setOpen(isOpen === true ? false : true);
   }
 
+  function closeSideNavLink() {
+    setOpen(false);
+  }
+
   const [Tabs, setTabs] = useState({
     Portfolio: false,
     About: false,
@@ -61,19 +65,19 @@ const Navbar = () => {
       <div className={`linksContainer ${isOpen ? "active" : ""}`}>
         <nav className="tabs">
           <ul>
-            <li>
+            <li onClick={closeSideNavLink}>
               <NavLink to="/About">
                 <AiOutlineUser className="icons" />
                 &nbsp;About
               </NavLink>
             </li>
-            <li>
+            <li onClick={closeSideNavLink}>
               <NavLink to="/Portfolio">
                 <AiOutlineCode className="icons" />
                 &nbsp;Portfolio
               </NavLink>
             </li>
-            <li>
+            <li onClick={closeSideNavLink}>
               <NavLink to="/Contact">
                 <AiOutlineMail className="icons" />
                 &nbsp;Contact
