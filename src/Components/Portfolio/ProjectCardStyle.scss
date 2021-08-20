@@ -3,8 +3,8 @@ $layout-breakpoint-small: 780px;
 
 .card {
   position: relative;
-  width: 45vw;
-  height: 22.5vw;
+  width: 38vw;
+  height: 19vw;
   font-size: 1.75rem;
   display: flex;
 
@@ -12,6 +12,8 @@ $layout-breakpoint-small: 780px;
   border: 0.1rem solid #dfdfdf;
   padding: 1.5rem;
   color: #666666;
+
+  cursor: pointer;
 
   overflow: hidden;
 
@@ -70,6 +72,7 @@ $layout-breakpoint-small: 780px;
         border-radius: 1rem;
         transition: 0.25s;
         background-color: #ffffff;
+        font-size: 2rem;
         &.demo {
           border: 0.25rem solid #0099e5;
           color: #0099e5;
@@ -106,8 +109,8 @@ $layout-breakpoint-small: 780px;
 
 @media (max-width: $layout-breakpoint-small) {
   .card {
-    width: 95vw;
-    height: 47.5vw;
+    width: 80vw;
+    height: 40vw;
     font-size: 1.45rem;
   }
 }
