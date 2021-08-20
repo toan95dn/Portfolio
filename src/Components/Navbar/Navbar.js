@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 import NavbarStyle from "./NavbarStyle.scss";
 
@@ -61,38 +61,23 @@ const Navbar = () => {
       <div className={`linksContainer ${isOpen ? "active" : ""}`}>
         <nav className="tabs">
           <ul>
-            <li
-              onClick={() => {
-                handleChangeTab("About");
-              }}
-              className={Tabs["About"] ? "active" : ""}
-            >
-              <Link to="/About">
+            <li>
+              <NavLink to="/About">
                 <AiOutlineUser className="icons" />
                 &nbsp;About
-              </Link>
+              </NavLink>
             </li>
-            <li
-              onClick={() => {
-                handleChangeTab("Portfolio");
-              }}
-              className={Tabs["Portfolio"] ? "active" : ""}
-            >
-              <Link to="/Portfolio">
+            <li>
+              <NavLink to="/Portfolio">
                 <AiOutlineCode className="icons" />
                 &nbsp;Portfolio
-              </Link>
+              </NavLink>
             </li>
-            <li
-              onClick={() => {
-                handleChangeTab("Contact");
-              }}
-              className={Tabs["Contact"] ? "active" : ""}
-            >
-              <Link to="/Contact">
+            <li>
+              <NavLink to="/Contact">
                 <AiOutlineMail className="icons" />
                 &nbsp;Contact
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </nav>
