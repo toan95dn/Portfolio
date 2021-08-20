@@ -10,7 +10,7 @@ $layout-breakpoint-small: 780px;
   grid-template-rows: 22.5vw 1fr 2fr 1fr 1fr;
   background-color: #ffffff;
   border: 0.1rem solid #dfdfdf;
-  padding: 1.5vw;
+  padding: 1.5rem;
   color: #666666;
   img {
     width: 100%;
@@ -39,21 +39,27 @@ $layout-breakpoint-small: 780px;
       cursor: pointer;
       border: none;
       width: 95%;
-      height: 95%;
-      border-radius: 1rem;
-      font-size: 1.7vw;
+      height: 4.25rem;
+      font-size: 1.75rem;
       font-weight: bold;
       color: white;
+      background-color: #ffffff;
       &.demo {
-        background-color: #ff5722bd;
+        border: 0.2rem solid #0099e5;
+        color: #0099e5;
+        transition: 0.5s;
         &:hover {
-          background-color: #ff5722;
+          background-color: #0099e5;
+          color: white;
         }
       }
       &.code {
-        background-color: #9e9e9ec7;
+        border: 0.2rem solid #666666;
+        color: #666666;
+        transition: 0.5s;
         &:hover {
-          background-color: #9e9e9e;
+          background-color: #666666;
+          color: white;
         }
       }
     }
@@ -67,10 +73,12 @@ $layout-breakpoint-small: 780px;
 }
 @media (max-width: $layout-breakpoint-small) {
   .card {
+    display: flex;
+    flex-direction: column;
+    height: auto;
     width: 90vw;
-    min-height: 150vw;
     padding: 3vw;
-    grid-template-rows: 45vw 1fr 2fr 1fr 1fr;
+    gap: 2rem;
     .buttonsContainer {
       button {
         font-size: 1.75rem;
