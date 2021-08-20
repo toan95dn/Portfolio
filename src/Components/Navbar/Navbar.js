@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import NavbarStyle from "./NavbarStyle.scss";
@@ -14,9 +14,34 @@ import {
   AiOutlineCodepen,
 } from "react-icons/ai";
 import { Squash as Hamburger } from "hamburger-react";
+import Contact from "../Contact/Contact";
 
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
+
+  function handleToggleHamburger() {
+    setOpen(isOpen === true ? false : true);
+  }
+
+  const [Tabs, setTabs] = useState({
+    Portfolio: false,
+    About: false,
+    Contact: false,
+  });
+
+  function handleChangeTab(tabName) {
+    for (let Tab in Tabs) {
+      Tabs[`${Tab}`] = false;
+    }
+
+    Tabs[`${tabName}`] = true;
+
+    setTabs({
+      Portfolio: Tabs["Portfolio"],
+      About: Tabs["About"],
+      Contact: Tabs["Contact"],
+    });
+  }
 
   return (
     <header>
@@ -24,9 +49,7 @@ const Navbar = () => {
         <Hamburger
           toggled={isOpen}
           toggle={setOpen}
-          onToggle={() => {
-            setOpen(isOpen === true ? false : true);
-          }}
+          onToggle={handleToggleHamburger}
         />
       </div>
 
@@ -38,19 +61,34 @@ const Navbar = () => {
       <div className={`linksContainer ${isOpen ? "active" : ""}`}>
         <nav className="tabs">
           <ul>
-            <li>
-              <Link to="/About" onClick={() => console.log("jjjj")}>
+            <li
+              onClick={() => {
+                handleChangeTab("About");
+              }}
+              className={Tabs["About"] ? "active" : ""}
+            >
+              <Link to="/About">
                 <AiOutlineUser className="icons" />
                 &nbsp;About
               </Link>
             </li>
-            <li>
+            <li
+              onClick={() => {
+                handleChangeTab("Portfolio");
+              }}
+              className={Tabs["Portfolio"] ? "active" : ""}
+            >
               <Link to="/Portfolio">
                 <AiOutlineCode className="icons" />
                 &nbsp;Portfolio
               </Link>
             </li>
-            <li>
+            <li
+              onClick={() => {
+                handleChangeTab("Contact");
+              }}
+              className={Tabs["Contact"] ? "active" : ""}
+            >
               <Link to="/Contact">
                 <AiOutlineMail className="icons" />
                 &nbsp;Contact

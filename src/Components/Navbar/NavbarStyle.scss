@@ -59,6 +59,12 @@ header {
           height: 5rem;
           width: 14rem;
           transition: 0.25s ease-in-out;
+
+          &.active {
+            border-bottom: -0.15rem solid #0099e5;
+            color: #0099e5;
+          }
+
           &::before {
             position: absolute;
             bottom: 0;
@@ -82,7 +88,7 @@ header {
             justify-content: center;
             align-items: center;
             text-decoration: none;
-            color: #333333;
+            color: inherit;
             &:hover {
               color: #0099e5;
             }
