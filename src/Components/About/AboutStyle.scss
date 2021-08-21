@@ -1,6 +1,7 @@
 $layout-breakpoint-large: 1600px;
 $layout-breakpoint-medium: 960px;
 $layout-breakpoint-small: 600px;
+@use "../Base.scss";
 
 .aboutContainer {
   padding-top: 5rem;
@@ -26,8 +27,8 @@ $layout-breakpoint-small: 600px;
     flex-direction: column;
     justify-content: center;
     padding: 2rem;
-    background-color: #ffffff;
-    color: #666666;
+    background-color: Base.$myWhite;
+    color: Base.$myDarkGray;
     font-weight: 400;
 
     h3 {
@@ -43,7 +44,7 @@ $layout-breakpoint-small: 600px;
         height: 0.15rem;
         width: 12rem;
         content: "";
-        background-color: #0099e5;
+        background-color: Base.$myBlue;
       }
     }
 
@@ -54,7 +55,7 @@ $layout-breakpoint-small: 600px;
       align-items: flex-end;
       justify-content: center;
       line-height: 7rem;
-      border-bottom: 0.15rem solid #666666;
+      border-bottom: 0.2rem solid Base.$myLighterGray;
       .Typewriter__cursor {
         color: #bbbbbb;
       }
@@ -68,7 +69,7 @@ $layout-breakpoint-small: 600px;
       max-width: 100%;
       padding: 0.75rem;
       margin-bottom: 2rem;
-      border: 0.15rem solid #dfdfdf;
+      border: 0.15rem solid Base.$myLightGray;
       li {
         width: 6rem;
         height: 6rem;
@@ -76,7 +77,7 @@ $layout-breakpoint-small: 600px;
         justify-content: center;
         align-items: center;
         transition: 0.25s;
-        color: #666666;
+        color: Base.$myDarkGray;
         &:hover {
           font-size: 5.5rem;
           transform: rotate(720deg);

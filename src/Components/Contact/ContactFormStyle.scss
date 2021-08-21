@@ -1,4 +1,5 @@
 $layout-breakpoint-small: 800px;
+@use "../Base.scss";
 
 form {
   margin-top: 3rem;
@@ -11,8 +12,8 @@ form {
   h2 {
     font-size: 2.2rem;
     line-height: 3.5rem;
-    color: #333333;
-    text-decoration: underline 0.25rem solid #0099e5;
+    color: Base.$myBlack;
+    text-decoration: underline 0.25rem solid Base.$myBlue;
     text-underline-offset: 0.5rem;
   }
 
@@ -37,26 +38,26 @@ form {
       resize: none;
       padding: 1rem;
       outline: none;
-      border: 0.15rem solid #dfdfdf;
+      border: 0.15rem solid Base.$myLightGray;
       &::placeholder {
         font-size: 1.5rem;
       }
     }
 
     input {
-      color: #666666;
+      color: Base.$myDarkGray;
       font-size: 1.5rem;
       padding: 1rem;
       height: 4rem;
       outline: none;
-      border: 0.15rem solid #dfdfdf;
+      border: 0.15rem solid Base.$myLightGray;
       &::placeholder {
         font-size: 1.5rem;
         margin-left: 1rem;
       }
 
       &:focus {
-        border-bottom: 0.2rem solid #0099e5;
+        border-bottom: 0.2rem solid Base.$myBlue;
       }
     }
   }
@@ -66,12 +67,13 @@ form {
     height: 4.25rem;
     font-size: 1.5rem;
     background-color: inherit;
-    border: 0.2rem solid #0099e5;
+    border: 0.2rem solid Base.$myBlue;
     transition: 0.5s;
     cursor: pointer;
+    color: Base.$myBlack;
     &:hover {
       color: white;
-      background-color: #0099e5;
+      background-color: Base.$myBlue;
     }
   }
 }

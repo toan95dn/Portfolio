@@ -1,4 +1,4 @@
-// @use "./Base.scss";
+@use "../Base.scss";
 $layout-breakpoint-medium: 1000px;
 
 header {
@@ -7,15 +7,15 @@ header {
   padding-bottom: 0.25rem;
   width: 100vw;
   height: 5rem;
-  background-color: #ffffff;
+  background-color: Base.$myWhite;
   align-items: center;
   font-size: 2rem;
   position: fixed;
   top: 0;
   left: 0;
-  border-bottom: 0.1rem solid #f5f5f5;
+  border-bottom: 0.1rem solid Base.$myLightGray;
   z-index: 1;
-  color: #333333;
+  color: Base.$myBlack;
 
   h2 {
     margin-left: 3rem;
@@ -72,11 +72,11 @@ header {
             transition: 0.25s ease-in-out;
 
             &:hover {
-              color: #0099e5;
+              color: Base.$myBlue;
             }
 
             &.active {
-              color: #0099e5;
+              color: Base.$myBlue;
             }
 
             &::before {
@@ -86,7 +86,7 @@ header {
               content: "";
               width: 0%;
               height: 0.15rem;
-              background: #0099e5;
+              background: Base.$myBlue;
               transition: 0.25s;
             }
             &:hover::before {
@@ -108,7 +108,7 @@ header {
       li {
         transition: 0.25s;
         &:hover {
-          color: #0099e5;
+          color: Base.$myBlue;
         }
       }
     }
@@ -134,7 +134,7 @@ header {
 
     .linksContainer {
       visibility: hidden;
-      background-color: #ffffff;
+      background-color: Base.$myWhite;
       position: fixed;
       display: grid;
       grid-template-columns: none;

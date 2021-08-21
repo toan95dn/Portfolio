@@ -1,18 +1,19 @@
 $layout-breakpoint-small: 780px;
+@use "../Base.scss";
 
 .portfolioContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  background-color: #ffffff;
+  background-color: Base.$myWhite;
   padding: 6rem 0 5rem 0;
 
   h1 {
     font-size: 3rem;
     margin: 2rem;
     line-height: 5rem;
-    border-bottom: 0.15rem solid #9e9e9e9c;
+    border-bottom: 0.2rem solid Base.$myLighterGray;
     width: 80%;
     text-align: start;
   }
@@ -30,8 +31,10 @@ $layout-breakpoint-small: 780px;
   .portfolioContainer {
     h1 {
       font-size: 2.5rem;
+      width: 90%;
     }
     .projectContainer {
+      width: 90%;
       grid-template-columns: none;
     }
   }
