@@ -1,4 +1,6 @@
 $layout-breakpoint-small: 780px;
+$layout-breakpoint-large: 1980px;
+
 @use "../Base.scss";
 
 .portfolioContainer {
@@ -37,5 +39,11 @@ $layout-breakpoint-small: 780px;
       width: 90%;
       grid-template-columns: none;
     }
+  }
+}
+
+@media (min-width: $layout-breakpoint-large) {
+  .portfolioContainer {
+    width: 1980px;
   }
 }

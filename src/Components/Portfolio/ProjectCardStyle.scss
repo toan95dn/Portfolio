@@ -1,5 +1,7 @@
 $layout-breakpoint-medium: 1100px;
 $layout-breakpoint-small: 780px;
+$layout-breakpoint-large: 1980px;
+
 @use "../Base.scss";
 
 .card {
@@ -112,6 +114,14 @@ $layout-breakpoint-small: 780px;
   .card {
     width: 90vw;
     height: 45vw;
+    font-size: 1.45rem;
+  }
+}
+
+@media (min-width: $layout-breakpoint-large) {
+  .card {
+    width: 750px;
+    height: 375px;
     font-size: 1.45rem;
   }
 }

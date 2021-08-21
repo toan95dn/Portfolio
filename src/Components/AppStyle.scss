@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-$layout-breakpoint-large: 1600px;
+$layout-breakpoint-large: 1980px;
 
 * {
   margin: 0;
@@ -28,15 +28,12 @@ html {
 // }
 
 @media (min-width: $layout-breakpoint-large) {
-  // html {
-  //   font-size: 0.65vw;
-  // }
-  // body {
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
-  //   #root {
-  //     width: 1600px;
-  //   }
-  // }
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    #root {
+      max-width: 1980px;
+    }
+  }
 }
