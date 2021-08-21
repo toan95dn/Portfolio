@@ -20,7 +20,7 @@ const pathFindingProject = new Project(
   "Visualize path finding (A*,BFS,DFS,Dijkstra,Greedy BFS) and maze generating algorithms (Recursive Division/Backtracking ), enable different rules for choosing path (Cross corner, Diagnoal).",
   ["C++", "SDL2"],
   "https://github.com/toan95dn/PathFindingVisualizer",
-  "https://www.youtube.com/watch?v=HU0FjhLMfPM"
+  "https://youtu.be/mImSZrL22Rk"
 );
 
 const todoListProject = new Project(

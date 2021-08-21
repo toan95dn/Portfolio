@@ -96,7 +96,7 @@ const ContactForm = () => {
       />
 
       <ReCAPTCHA
-        sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+        sitekey="6Ldweg0cAAAAACx43oLnptb_YJtws-iTc4EHTzQS"
         onChange={toggleIsHuman}
       />
 

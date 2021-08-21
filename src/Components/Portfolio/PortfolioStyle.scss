@@ -1,4 +1,4 @@
-$layout-breakpoint-small: 780px;
+$layout-breakpoint-medium: 900px;
 $layout-breakpoint-large: 1980px;
 
 @use "../Base.scss";
@@ -29,7 +29,7 @@ $layout-breakpoint-large: 1980px;
   }
 }
 
-@media (max-width: $layout-breakpoint-small) {
+@media (max-width: $layout-breakpoint-medium) {
   .portfolioContainer {
     h1 {
       font-size: 2.5rem;
