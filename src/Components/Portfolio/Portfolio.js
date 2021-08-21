@@ -3,6 +3,8 @@ import Projects from "./ProjectsInfo";
 import ProjectCard from "./ProjectCard";
 import uniqid from "uniqid";
 import PorfolioStyle from "./PortfolioStyle.scss";
+import { motion } from "framer-motion";
+import containerVariants from "../Transition/Transition";
 
 const Portfolio = () => {
   const listProjects = Projects.map((currProject) => {
@@ -13,7 +15,13 @@ const Portfolio = () => {
     );
   });
   return (
-    <div className="portfolioContainer">
+    <motion.div
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+      className="portfolioContainer"
+    >
       <h1>Portfolio</h1>
       {/* <ul className="filterContainer">
         <li>All</li>
@@ -24,7 +32,7 @@ const Portfolio = () => {
         <li>FireBase</li>
       </ul> */}
       <ul className="projectContainer">{listProjects}</ul>
-    </div>
+    </motion.div>
   );
 };
 

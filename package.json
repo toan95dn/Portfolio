@@ -25,6 +25,7 @@
   "dependencies": {
     "babel-loader": "^8.2.2",
     "emailjs-com": "^3.2.0",
+    "framer-motion": "^4.1.17",
     "grapheme-splitter": "^1.0.4",
     "hamburger-react": "^2.4.1",
     "react": "^17.0.2",

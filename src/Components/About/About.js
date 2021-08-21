@@ -19,6 +19,8 @@ import {
   SiGithub,
   SiGit,
 } from "react-icons/si";
+import { motion } from "framer-motion";
+import containerVariants from "../Transition/Transition";
 
 const About = () => {
   const currStringSplitter = (string) => {
@@ -45,7 +47,13 @@ const About = () => {
   const listToolsViews = tools.map((tool) => <li key={uniqid()}>{tool}</li>);
 
   return (
-    <div className="aboutContainer">
+    <motion.div
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+      className="aboutContainer"
+    >
       <img src={Avatar} alt="" />
 
       <div className="infoContainer">
@@ -106,7 +114,7 @@ const About = () => {
           <ul className="skillsContainer">{listToolsViews}</ul>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

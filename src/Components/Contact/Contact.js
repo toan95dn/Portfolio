@@ -2,6 +2,8 @@ import React from "react";
 import ContactStyle from "./ContactStyle.scss";
 import ContactForm from "./ContactForm";
 import { FiPhoneCall, FiMapPin, FiMail, FiCheckCircle } from "react-icons/fi";
+import { motion } from "framer-motion";
+import containerVariants from "../Transition/Transition";
 
 const Contact = () => {
   const myMap = (
@@ -18,7 +20,13 @@ const Contact = () => {
   );
 
   return (
-    <div className="contactContainer">
+    <motion.div
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+      className="contactContainer"
+    >
       <h1>Contact</h1>
       <div className="mapContainer">{myMap}</div>
 
@@ -42,7 +50,7 @@ const Contact = () => {
       </ul>
 
       <ContactForm />
-    </div>
+    </motion.div>
   );
 };
 
