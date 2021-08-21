@@ -3,6 +3,8 @@ import todoImg from "../Images/todo.jpg";
 import icemanImg from "../Images/iceman.jpg";
 import tictactoeImg from "../Images/tictactoe.jpg";
 import restaurantImg from "../Images/restaurant.jpg";
+import portfolioImg from "../Images/portfolio.jpg";
+
 class Project {
   constructor(imageSource, title, detail, tools, githubLink, demoLink) {
     this.imageSource = imageSource;
@@ -41,6 +43,15 @@ const icemanProject = new Project(
   "https://youtu.be/ebFYCahk4cc"
 );
 
+const portfolioProject = new Project(
+  portfolioImg,
+  "Personal website",
+  "My portfolio website shows my projects and contact information. The contact form can be submitted using emailJS. Also, I integrated Captcha provided by Google to avoid spam.",
+  ["React", "Hooks", "SCSS", "Webpack", "Babel"],
+  "https://github.com/toan95dn/Portfolio",
+  "https://toan95dn.github.io/Portfolio/"
+);
+
 const tictactoeProject = new Project(
   tictactoeImg,
   "Tictactoe w/Minimax",
@@ -62,6 +73,7 @@ const restaurantProject = new Project(
 const Projects = [
   todoListProject,
   pathFindingProject,
+  portfolioProject,
   icemanProject,
   restaurantProject,
   tictactoeProject,
