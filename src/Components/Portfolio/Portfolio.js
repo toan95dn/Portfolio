@@ -4,7 +4,7 @@ import ProjectCard from "./ProjectCard";
 import uniqid from "uniqid";
 import PorfolioStyle from "./PortfolioStyle.scss";
 import { motion } from "framer-motion";
-import containerVariants from "../Transition/Transition";
+import AllContainerVariants from "../Transition/Transition";
 
 const Portfolio = () => {
   const listProjects = Projects.map((currProject) => {
@@ -16,7 +16,7 @@ const Portfolio = () => {
   });
   return (
     <motion.div
-      variants={containerVariants}
+      variants={AllContainerVariants[2]}
       initial="hidden"
       animate="visible"
       exit="exit"
